@@ -18,8 +18,11 @@ import org.springframework.web.util.UriComponentsBuilder;
 import com.adbhut.model.Product;
 import com.adbhut.service.ProductService;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
 @RequestMapping("/products")
+@Slf4j
 public class ProductController {
 
 	private ProductService productService;
@@ -34,18 +37,23 @@ public class ProductController {
 
 	@GetMapping(value = "/")
 	public List<Product> list() {
-		return productService.listAllProducts();
+		List<Product> products = productService.listAllProducts();
+		log.info("list method called {}", products);
+		return products;
 	}
 
 	@GetMapping(value = "/{id}/product")
 	public Product showProduct(@PathVariable Integer id) {
-		return productService.getProductById(id).get();
+		Product product = productService.getProductById(id).get();
+		log.info("showProduct method called {}", product);
+		return product;
 	}
 
 	@PostMapping(value = "/")
 	public ResponseEntity<?> createProduct(@RequestBody Product product) {
 		Product createdProduct = productService.saveProduct(product);
 		UriComponents uriComponents = uriBuilder.path("/{id}/product").buildAndExpand(createdProduct.getId());
+		log.info("createProduct method created product {}", product);
 		return ResponseEntity.created(uriComponents.toUri()).build();
 
 	}
@@ -57,11 +65,13 @@ public class ProductController {
 		storedProduct.setImageUrl(product.getImageUrl());
 		storedProduct.setPrice(product.getPrice());
 		productService.saveProduct(storedProduct);
+		log.info("updateProduct method called for id {} with value {}", id, storedProduct);
 		return ResponseEntity.ok("Product updated successfully");
 	}
 
 	@DeleteMapping(value = "/{id}/product")
 	public void delete(@PathVariable Integer id) {
+		log.info("delete method called  for id {}", id);
 		productService.deleteProduct(id);
 	}
 
