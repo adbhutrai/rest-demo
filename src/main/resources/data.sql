@@ -1,0 +1,2 @@
+insert into product(name, description, IMAGE_URL, price) values('First','First product', 'test.first.com', 10.00);
+insert into product(name,description, IMAGE_URL, price) values('Second','Second product', 'test.second.com', 20.00);

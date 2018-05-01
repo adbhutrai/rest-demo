@@ -1,0 +1,8 @@
+CREATE TABLE product (
+    id   INTEGER      NOT NULL AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    description VARCHAR(256) NOT NULL,
+    IMAGE_URL VARCHAR(256) NOT NULL,
+    price DECIMAL(20, 2) NOT NULL,
+    PRIMARY KEY (id)
+);
