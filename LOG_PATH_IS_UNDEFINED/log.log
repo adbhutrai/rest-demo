@@ -1,0 +1,12 @@
+08-08-2018 23:29:18.591 [restartedMain] INFO 
+				com.adbhut.Application.logStarting - Starting Application on adbhut with PID 2840 (C:\work_oauth2\restapi\target\classes started by adbhutrai in C:\work_oauth2\restapi)
+08-08-2018 23:29:18.591 [restartedMain] DEBUG
+				com.adbhut.Application.logStarting - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+08-08-2018 23:29:18.591 [restartedMain] INFO 
+				com.adbhut.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+08-08-2018 23:29:20.511 [restartedMain] INFO 
+				com.adbhut.Application.logStarted - Started Application in 1.995 seconds (JVM running for 1675.903)
+23:29:43.073 [restartedMain] INFO  Application - Starting Application on adbhut with PID 2840 (C:\work_oauth2\restapi\target\classes started by adbhutrai in C:\work_oauth2\restapi)
+23:29:43.073 [restartedMain] DEBUG Application - Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+23:29:43.073 [restartedMain] INFO  Application - No active profile set, falling back to default profiles: default
+23:29:45.040 [restartedMain] INFO  Application - Started Application in 2.009 seconds (JVM running for 1700.42)
