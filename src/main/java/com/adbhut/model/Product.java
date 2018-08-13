@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,7 +20,6 @@ import lombok.NoArgsConstructor;
 @Entity(name = "product")
 public class Product {
 	
-	static Gson gson = new GsonBuilder().setPrettyPrinting().create();
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
